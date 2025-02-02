@@ -1,0 +1,13 @@
+ktor:
+  application:
+    modules:
+      - com.taskmanager.ApplicationKt.module
+  deployment:
+    port: 8080
+
+jwt:
+  secret: "secret-key"
+  issuer: "http://0.0.0.0:8080/"
+  audience: "http://0.0.0.0:8080/hello"
+  realm: "Access to 'hello'"
+  tokenExpiryMillis: 3600000
